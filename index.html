@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Mera Meter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FA8334;
+            --primary-dark: #D9681E;
+            --primary-light: #FFF1E8;
+            --secondary: #00875A;
+            --secondary-light: #E3FCEF;
+            --background: #0F172A;
+            --surface: #1E293B;
+            --surface-card: #273549;
+            --surface-border: #334155;
+            --text-primary: #F8FAFC;
+            --text-secondary: #94A3B8;
+            --text-muted: #64748B;
+            --error-bg: #451a1a;
+            --error-border: #f87171;
+            --error-text: #fca5a5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--background);
+            color: var(--text-primary);
+            line-height: 1.7;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 40px 24px 80px 24px;
+        }
+
+        /* Header & Brand */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--surface-border);
+        }
+
+        .brand-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, rgba(250, 131, 52, 0.15), rgba(250, 131, 52, 0.05));
+            border: 1px solid rgba(250, 131, 52, 0.3);
+            padding: 8px 18px;
+            border-radius: 999px;
+            margin-bottom: 16px;
+        }
+
+        .brand-icon {
+            width: 28px;
+            height: 28px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .brand-name {
+            font-weight: 800;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, #ffffff 40%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .effective-date {
+            color: var(--text-secondary);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* Language Switcher Button Bar */
+        .lang-switch {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 24px 0 10px 0;
+        }
+
+        .lang-btn {
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            color: var(--text-secondary);
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(250, 131, 52, 0.25);
+        }
+
+        .lang-btn:hover:not(.active) {
+            border-color: var(--primary);
+            color: var(--text-primary);
+        }
+
+        /* Callout Box / Disclaimer */
+        .disclaimer-card {
+            background: var(--error-bg);
+            border: 1px solid var(--error-border);
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin-bottom: 32px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .disclaimer-icon {
+            font-size: 24px;
+            line-height: 1;
+        }
+
+        .disclaimer-content h3 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #fecaca;
+            margin-bottom: 6px;
+        }
+
+        .disclaimer-content p {
+            font-size: 13px;
+            color: var(--error-text);
+            line-height: 1.6;
+        }
+
+        /* Summary Pillar Cards */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .pillar-card {
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            border-radius: 14px;
+            padding: 20px;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary);
+        }
+
+        .pillar-icon {
+            font-size: 24px;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        .pillar-title {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: #fff;
+        }
+
+        .pillar-desc {
+            font-size: 12.5px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* Main Policy Sections */
+        .policy-section {
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 24px;
+        }
+
+        .policy-section h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: rgba(250, 131, 52, 0.15);
+            color: var(--primary);
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        .policy-section p {
+            color: var(--text-secondary);
+            font-size: 14.5px;
+            margin-bottom: 16px;
+        }
+
+        .policy-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .policy-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 12px 0 16px 0;
+        }
+
+        .policy-section li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .policy-section li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--secondary);
+            font-weight: 800;
+        }
+
+        .highlight-box {
+            background: var(--surface-card);
+            border-left: 4px solid var(--primary);
+            border-radius: 0 10px 10px 0;
+            padding: 14px 18px;
+            margin: 16px 0;
+            font-size: 13.5px;
+            color: var(--text-primary);
+        }
+
+        /* Urdu section styling */
+        .lang-content-urdu {
+            display: none;
+            direction: rtl;
+            text-align: right;
+            font-family: 'Noto Nastaliq Urdu', 'Plus Jakarta Sans', sans-serif;
+            line-height: 2.2;
+        }
+
+        .lang-content-urdu h1,
+        .lang-content-urdu h2,
+        .lang-content-urdu h3 {
+            font-family: 'Noto Nastaliq Urdu', 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .lang-content-urdu .policy-section li {
+            padding-left: 0;
+            padding-right: 28px;
+        }
+
+        .lang-content-urdu .policy-section li::before {
+            left: auto;
+            right: 0;
+        }
+
+        .lang-content-urdu .highlight-box {
+            border-left: none;
+            border-right: 4px solid var(--primary);
+            border-radius: 10px 0 0 10px;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--surface-border);
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 24px 16px 60px 16px;
+            }
+            h1 {
+                font-size: 26px;
+            }
+            .policy-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <div class="brand-badge">
+            <div class="brand-icon">⚡</div>
+            <span class="brand-name">Mera Meter (میرا میٹر)</span>
+        </div>
+        <h1 id="page-title">Privacy Policy</h1>
+        <p class="effective-date" id="page-date">Last Updated: August 31, 2026</p>
+
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="setLanguage('en')">English</button>
+            <button class="lang-btn" onclick="setLanguage('ur')">اردو (Urdu)</button>
+        </div>
+    </header>
+
+    <!-- ============================================================= -->
+    <!-- ENGLISH VERSION                                               -->
+    <!-- ============================================================= -->
+    <div id="english-content" class="lang-content-en">
+        
+        <!-- Disclaimer Card -->
+        <div class="disclaimer-card">
+            <div class="disclaimer-icon">⚠️</div>
+            <div class="disclaimer-content">
+                <h3>Non-Affiliation & Independent Software Notice</h3>
+                <p>
+                    <strong>Mera Meter</strong> is an independent utility tracking, estimation, and bill management application. It is <strong>NOT</strong> affiliated with, endorsed by, sponsored by, or an official product of any Government agency, the Federal Ministry of Energy (Power Division), PEPCO, PITC, NEPRA, or any electricity distribution company (including MEPCO, LESCO, FESCO, IESCO, GEPCO, PESCO, HESCO, SEPCO, QESCO, TESCO, and K-Electric).
+                </p>
+            </div>
+        </div>
+
+        <!-- Pillars Summary -->
+        <div class="pillars-grid">
+            <div class="pillar-card">
+                <div class="pillar-icon">🔒</div>
+                <div class="pillar-title">100% On-Device Storage</div>
+                <div class="pillar-desc">Your meter reference numbers, unit tracking logs, and bill archives are stored strictly in your local device SQLite/Room database.</div>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon">🌐</div>
+                <div class="pillar-title">Direct On-Demand Queries</div>
+                <div class="pillar-desc">Electricity bill queries are fetched on demand directly through official public inquiry portals without routing through private intermediary servers.</div>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon">📢</div>
+                <div class="pillar-title">Google AdMob Compliance</div>
+                <div class="pillar-desc">Non-sensitive device identifiers and standard advertising metrics are processed securely in accordance with Google Play and AdMob standards.</div>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon">✨</div>
+                <div class="pillar-title">Secure AI Smart Audits</div>
+                <div class="pillar-desc">AI bill advice and solar forecasting insights process only tariff numbers and unit values — never personal citizen identification data.</div>
+            </div>
+        </div>
+
+        <!-- Detailed Policy Sections -->
+        <section class="policy-section">
+            <h2><span class="section-num">1</span> Information We Collect and Store</h2>
+            <p>We prioritize your privacy above all else. Mera Meter is designed with an <strong>offline-first</strong> architecture:</p>
+            <ul>
+                <li><strong>Utility Reference Numbers:</strong> 14-digit consumer reference IDs or account numbers that you voluntarily input to track your electricity bills.</li>
+                <li><strong>Custom Meter Labels & Logs:</strong> Optional nicknames (e.g., "Home", "Office", "Shop") and manual unit readings you log over time.</li>
+                <li><strong>Local Bill History:</strong> Previous billing amounts, unit consumption, and tariff category cached locally for offline comparison and analytics.</li>
+            </ul>
+            <div class="highlight-box">
+                <strong>Zero Remote Server Storage:</strong> We do NOT operate central servers that record, aggregate, or harvest your electricity consumption data, names, addresses, or billing records.
+            </div>
+        </section>
+
+        <section class="policy-section">
+            <h2><span class="section-num">2</span> How Electricity Bills Are Retrieved</h2>
+            <p>When you add a new meter or click refresh to check for recent bills:</p>
+            <ul>
+                <li>The application makes a direct, client-initiated secure connection to the official public web bill portals hosted by power distribution companies (DISCOs).</li>
+                <li>Data returned (billing month, issue date, due date, units consumed, taxes, and payable amounts) is parsed on your device and cached locally.</li>
+                <li>This process occurs exclusively under your initiation or through local on-device background alarm checks configured in the app settings.</li>
+            </ul>
+        </section>
+
+        <section class="policy-section">
+            <h2><span class="section-num">3</span> Advertising & Google AdMob</h2>
+            <p>To keep the core features of Mera Meter free for everyone, the free tier of the app displays advertisements served by <strong>Google AdMob</strong>.</p>
+            <p>Google AdMob may collect and process certain information, including:</p>
+            <ul>
+                <li>Google Advertising ID (AAID) and device hardware specifications.</li>
+                <li>Approximate regional location and IP address for localized ad relevance.</li>
+                <li>User interaction events with ads (impressions, clicks).</li>
+            </ul>
+            <p>You can manage your advertising preferences and reset your Advertising ID at any time in your Android device's <em>Settings &gt; Google &gt; Ads</em>.</p>
+        </section>
+
+        <section class="policy-section">
+            <h2><span class="section-num">4</span> AI Audits & Smart Calculations (Gemini API)</h2>
+            <p>Mera Meter includes an AI-assisted Tariff Auditor and Live Energy Advisor. When you request an AI calculation:</p>
+            <ul>
+                <li>Only numeric utility parameters (units consumed, tariff slabs, peak vs. off-peak split, solar export counts) and bill line items are transmitted for analysis.</li>
+                <li>Personal customer names, phone numbers, and physical property addresses are stripped or excluded prior to analysis.</li>
+                <li>Data transmitted to AI APIs is processed in accordance with Google's API Data Governance and Privacy Terms.</li>
+            </ul>
+        </section>
+
+        <section class="policy-section">
+            <h2><span class="section-num">5</span> User Feedback & Feature Requests</h2>
+            <p>When you submit feedback, report a bug, or participate in community feature polls:</p>
+            <ul>
+                <li>Your submission title, description, category, and an anonymous client device token are sent to our feedback service to organize and respond to requests.</li>
+                <li>You may optionally choose to provide contact details if you request a personal follow-up from our developer team.</li>
+                <li>Feedback is retained solely for product improvement and bug resolution.</li>
+            </ul>
+        </section>
+
+        <section class="policy-section">
+            <h2><span class="section-num">6</span> Data Deletion and Retention</h2>
+            <p>Because all meter data and calculations are stored exclusively on your device:</p>
+            <ul>
+                <li><strong>Meter Deletion:</strong> You can delete any individual meter or bill record directly from the app interface at any time.</li>
+                <li><strong>Complete Purge:</strong> Clearing the app storage or uninstalling the Mera Meter application will permanently delete all stored data from your device.</li>
+            </ul>
+        </section>
+
+        <section class="policy-section">
+            <h2><span class="section-num">7</span> Contact Us</h2>
+            <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our practices, please contact us at:</p>
+            <div class="highlight-box">
+                <strong>Email:</strong> <a href="mailto:support@merameter.app" style="color: var(--primary);">support@merameter.app</a><br>
+                <strong>Developer:</strong> Mera Meter Independent Team<br>
+                <strong>Response Time:</strong> Within 24–48 business hours
+            </div>
+        </section>
+    </div>
+
+    <!-- ============================================================= -->
+    <!-- URDU VERSION                                                  -->
+    <!-- ============================================================= -->
+    <div id="urdu-content" class="lang-content-urdu">
+        
+        <!-- Disclaimer Card in Urdu -->
+        <div class="disclaimer-card">
+            <div class="disclaimer-icon">⚠️</div>
+            <div class="disclaimer-content">
+                <h3>غیر وابستگی اور خود مختار ایپ کا لازمی اعلان</h3>
+                <p>
+                    <strong>میرا میٹر (Mera Meter)</strong> ایک آزاد اور خودمختار یوٹیلیٹی ٹریکر، کیلکولیٹر اور بل مینیجر ایپلی کیشن ہے۔ اس ایپ کا کسی بھی حکومتی ادارے، وفاقی وزارت توانائی (پاور ڈویژن)، پیپکو، پی آئی ٹی سی، نیپرا، یا کسی بھی بجلی کی تقسیم کار کمپنی (بشمول میپکو، لیسکو، فیسکو، آئیسکو، گیپکو، پیسکو، ہیسکو، سیپکو، کیسکو، ٹیسکو اور کے-الیکٹرک) سے کوئی آفیشل الحاق یا شراکت داری نہیں ہے۔
+                </p>
+            </div>
+        </div>
+
+        <!-- Pillars Summary Urdu -->
+        <div class="pillars-grid">
+            <div class="pillar-card">
+                <div class="pillar-icon">🔒</div>
+                <div class="pillar-title">۱۰۰٪ محفوظ لوکل ڈیٹا بیس</div>
+                <div class="pillar-desc">آپ کے ریفرنس نمبرز، میٹر ریڈنگز اور بلز کا ریکارڈ صرف آپ کے موبائل فون میں مقامی ڈیٹا بیس میں محفوظ ہوتا ہے۔</div>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon">🌐</div>
+                <div class="pillar-title">براہِ راست آن ڈیمانڈ رابطہ</div>
+                <div class="pillar-desc">بجلی کے بلز براہِ راست سرکاری و عوامی پورٹلز سے صارف کی درخواست پر ڈاؤن لوڈ کیے جاتے ہیں، کسی درمیانی سرور کے بغیر۔</div>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon">📢</div>
+                <div class="pillar-title">گوگل ایڈموب اشتہارات کی پالیسی</div>
+                <div class="pillar-desc">مفت سروس کے اخراجات پورے کرنے کے لیے گوگل ایڈموب کے مصدقہ اور محفوظ اشتہارات کے اصولوں پر عمل کیا جاتا ہے۔</div>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon">✨</div>
+                <div class="pillar-title">محفوظ اے آئی تجاویز</div>
+                <div class="pillar-desc">سمارٹ بل تجزیہ اور سولر تخمینے کے لیے صرف یونٹس اور ٹیرف کا حساب لیا جاتا ہے، ذاتی شناختی معلومات نہیں۔</div>
+            </div>
+        </div>
+
+        <!-- Detailed Policy Sections Urdu -->
+        <section class="policy-section">
+            <h2><span class="section-num">۱</span> ہم کون سی معلومات محفوظ کرتے ہیں؟</h2>
+            <p>میرا میٹر ایپ کو مکمل طور پر <strong>آف لائن فرسٹ (Offline-First)</strong> طرز پر بنایا گیا ہے تاکہ صارف کی رازداری کا مکمل تحفظ ہو:</p>
+            <ul>
+                <li><strong>یوٹیلیٹی ریفرنس نمبرز:</strong> 14 ہندسوں پر مشتمل ریفرنس یا اکاؤنٹ نمبر جو آپ بل چیک کرنے کے لیے خود داخل کرتے ہیں۔</li>
+                <li><strong>میٹر کے نام اور ریڈنگز:</strong> میٹر کے عنوانات (مثلاً "گھر"، "دکان"، "دفتر") اور روزانہ درج کی گئی ریڈنگز۔</li>
+                <li><strong>پچھلے بلوں کی تاریخ:</strong> پچھلے مہینوں کے بلز اور یونٹس کا موازنہ کرنے کے لیے مقامی ہسٹری۔</li>
+            </ul>
+            <div class="highlight-box">
+                <strong>کوئی مرکزی کلاؤڈ اسٹوریج نہیں:</strong> ہم کوئی ایسا سینٹرل سرور نہیں چلاتے جہاں آپ کا بجلی کا ڈیٹا، نام، پتے یا ذاتی بلنگ ریکارڈز محفوظ کیے جائیں۔
+            </div>
+        </section>
+
+        <section class="policy-section">
+            <h2><span class="section-num">۲</span> بجلی کے بل کس طرح حاصل کیے جاتے ہیں؟</h2>
+            <p>جب آپ نیا میٹر شامل کرتے ہیں یا بل کو ریفریش کرتے ہیں:</p>
+            <ul>
+                <li>یہ ایپ متعلقہ بجلی کمپنی کے آفیشل عوامی پورٹل پر ایک محفوظ آن لائن انکوائری بھیجتی ہے۔</li>
+                <li>موصول ہونے والی تفصیلات (مہینہ، آخری تاریخ، واجب الادا رقم، یونٹس اور ٹیکسز) آپ کے موبائل میں ظاہر اور محفوظ ہوتی ہیں۔</li>
+                <li>یہ عمل مکمل طور پر صارف کی مرضی اور ریفرنس نمبر کی بنیاد پر ہوتا ہے۔</li>
+            </ul>
+        </section>
+
+        <section class="policy-section">
+            <h2><span class="section-num">۳</span> اشتہارات اور گوگل ایڈموب (Google AdMob)</h2>
+            <p>میرا میٹر کے بنیادی فیچرز کو تمام صارفین کے لیے مفت رکھنے کی خاطر ایپ میں <strong>گوگل ایڈموب</strong> کے اشتہارات دکھائے جاتے ہیں۔</p>
+            <p>گوگل ایڈموب درج ذیل بنیادی تیکنیکی معلومات پروسیس کر سکتا ہے:</p>
+            <ul>
+                <li>گوگل ایڈورٹائزنگ آئی ڈی (AAID) اور موبائل ڈیوائس ماڈل۔</li>
+                <li>مناسب اشتہار دکھانے کے لیے تقریبن جغرافیائی خطہ اور IP ایڈریس۔</li>
+                <li>اشتہارات پر کلکس اور نمائش (Impressions) کے بنیادی اعداد و شمار۔</li>
+            </ul>
+            <p>آپ اپنے فون کی سیٹنگز (Settings &gt; Google &gt; Ads) میں جا کر کسی بھی وقت اشتہاری ترجیحات تبدیل یا ری سیٹ کر سکتے ہیں۔</p>
+        </section>
+
+        <section class="policy-section">
+            <h2><span class="section-num">۴</span> اے آئی سمارٹ آڈٹ اور بل تجزیہ</h2>
+            <p>جب آپ ایپ میں اے آئی آڈیٹر یا سمارٹ انرجی ایڈوائزر استعمال کرتے ہیں:</p>
+            <ul>
+                <li>صرف بل کے عددی اعداد و شمار (یونٹس، ٹیرف سلیب، پیک اور آف پیک اوقات) تجزیہ کے لیے بھیجے جاتے ہیں۔</li>
+                <li>صارف کا ذاتی شناختی کارڈ، فون نمبر یا گھر کا پتہ شامل نہیں کیا جاتا۔</li>
+                <li>یہ پروسیسنگ گوگل کے محفوظ اے آئی ڈیٹا اصولوں کے تحت کی جاتی ہے۔</li>
+            </ul>
+        </section>
+
+        <section class="policy-section">
+            <h2><span class="section-num">۵</span> فیڈ بیک اور نئی تجاویز</h2>
+            <p>جب آپ ایپ میں فیڈ بیک یا خرابی کی رپورٹ جمع کرواتے ہیں:</p>
+            <ul>
+                <li>آپ کی تجویز کا عنوان، تفصیل اور زمرہ ہماری سپورٹ ٹیم تک پہنچایا جاتا ہے تاکہ ایپ کو مزید بہتر بنایا جا سکے۔</li>
+                <li>فیڈ بیک صرف ایپ کی کارکردگی اور فیچرز کی بہتری کے لیے استعمال کیا جاتا ہے۔</li>
+            </ul>
+        </section>
+
+        <section class="policy-section">
+            <h2><span class="section-num">۶</span> ڈیٹا ڈیلیٹ کرنے کا طریقہ</h2>
+            <p>چونکہ تمام ڈیٹا صرف آپ کے فون میں محفوظ ہوتا ہے:</p>
+            <ul>
+                <li><strong>انفرادی ریکارڈ:</strong> آپ ایپ کے اندر سے کسی بھی میٹر کو باآسانی ڈیلیٹ کر سکتے ہیں۔</li>
+                <li><strong>مکمل صفائی:</strong> ایپ کو ان انسٹال کرنے یا موبائل سیٹنگز سے 'کلیئر ڈیٹا' کرنے پر تمام ریکارڈز فوری اور مستقل طور پر حذف ہو جائیں گے۔</li>
+            </ul>
+        </section>
+
+        <section class="policy-section">
+            <h2><span class="section-num">۷</span> رابطہ کریں</h2>
+            <p>اگر آپ کے پاس اس رازداری کی پالیسی سے متعلق کوئی سوال، رائے یا تجویز ہے تو آپ ہم سے رابطہ کر سکتے ہیں:</p>
+            <div class="highlight-box">
+                <strong>ای میل:</strong> <a href="mailto:support@merameter.app" style="color: var(--primary);">support@merameter.app</a><br>
+                <strong>ڈیولپر:</strong> میرا میٹر انڈیپنڈنٹ ٹیم<br>
+                <strong>جواب کا دورانیہ:</strong> 24 سے 48 کاروباری گھنٹے
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 <strong>Mera Meter</strong>. All rights reserved.</p>
+        <p style="margin-top: 6px;">Hosted on GitHub Pages / Public Web Repository</p>
+    </footer>
+
+</div>
+
+<script>
+    function setLanguage(lang) {
+        const enContent = document.getElementById('english-content');
+        const urContent = document.getElementById('urdu-content');
+        const titleEl = document.getElementById('page-title');
+        const dateEl = document.getElementById('page-date');
+        const btns = document.querySelectorAll('.lang-btn');
+
+        btns.forEach(btn => btn.classList.remove('active'));
+
+        if (lang === 'ur') {
+            enContent.style.display = 'none';
+            urContent.style.display = 'block';
+            titleEl.textContent = 'رازداری کی پالیسی (Privacy Policy)';
+            dateEl.textContent = 'آخری اپ ڈیٹ: 31 اگست 2026';
+            btns[1].classList.add('active');
+            document.documentElement.lang = 'ur';
+        } else {
+            enContent.style.display = 'block';
+            urContent.style.display = 'none';
+            titleEl.textContent = 'Privacy Policy';
+            dateEl.textContent = 'Last Updated: August 31, 2026';
+            btns[0].classList.add('active');
+            document.documentElement.lang = 'en';
+        }
+    }
+</script>
+
+</body>
+</html>
